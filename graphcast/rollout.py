@@ -30,8 +30,7 @@ import xarray
 def _device_put_sharded(data_list, devices, axis_name):
   """Stack data and put on devices with consistent sharding.
 
-  When jax_pmap_shmap_merge is enabled, this creates a mesh with axis_name
-  to ensure JIT cache consistency with pmap.
+  Creates a mesh with axis_name to ensure JIT cache consistency with pmap.
 
   Args:
     data_list: List of data to stack and put on devices.
@@ -41,20 +40,16 @@ def _device_put_sharded(data_list, devices, axis_name):
   Returns:
     Data put on devices with consistent sharding.
   """
-  if jax.config.jax_pmap_shmap_merge:
-    mesh = jax.sharding.Mesh(np.array(devices), (axis_name,))
-    sharding = jax.NamedSharding(mesh, jax.P(axis_name))
-    # Use jnp.stack to keep JAX-resident data on device, otherwise use np.stack
-    # on host-resident data for a single bulk transfer to device.
-    stack_fn = (
-        jnp.stack
-        if all(isinstance(x, jax.Array) for x in data_list)
-        else np.stack
-    )
-    stacked = stack_fn(data_list, axis=0)
-    return jax.device_put(stacked, sharding)
-  else:
-    return jax.device_put_sharded(list(data_list), devices)
+
+  mesh = jax.sharding.Mesh(np.array(devices), (axis_name,))
+  sharding = jax.NamedSharding(mesh, jax.P(axis_name))
+  stack_fn = (
+      jnp.stack
+      if all(isinstance(x, jax.Array) for x in data_list)
+      else np.stack
+  )
+  stacked = stack_fn(data_list, axis=0)
+  return jax.device_put(stacked, sharding)
 
 
 class PredictorFn(typing_extensions.Protocol):
