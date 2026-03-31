@@ -74,7 +74,7 @@ from 1979 to 2018, and can be causally evaluated on 2019 and later years.
 This model has the smallest memory footprint of those provided and has been
 provided to enable low cost demonstrations (for example, it is runnable in a free Colab notebook).
 While its performance is reasonable, it is not representative of the performance
-of the GenCast models (1-3) above. For reference, a scorecard comparing its performance to ENS can be found in [docs/](https://github.com/google-deepmind/graphcast/blob/main/docs/GenCast_1p0deg_Mini_ENS_scorecard.png). Note that in this scorecard,
+of the GenCast models (1-3) above. For reference, a scorecard comparing its performance to ENS can be found in [docs/](https://github.com/Unity-Billal-mesloub/graphcast/blob/main/docs/GenCast_1p0deg_Mini_ENS_scorecard.png). Note that in this scorecard,
 GenCast Mini only uses 8 member ensembles (vs. ENS' 50) so we use the fair (unbiased)
 CRPS to allow for fair comparison.
 
@@ -87,7 +87,7 @@ subdir of the Google Cloud Bucket.
 
 ### Instructions for running GenCast on Google Cloud compute
 
-[cloud_vm_setup.md](https://github.com/google-deepmind/graphcast/blob/main/docs/cloud_vm_setup.md)
+[cloud_vm_setup.md](https://github.com/Unity-Billal-mesloub/graphcast/blob/main/docs/cloud_vm_setup.md)
 contains detailed instructions on launching a Google Cloud TPU VM. This provides
 a means of running models (1-3) in the separate `gencast_demo_cloud_vm.ipynb` through [Colaboratory](https://colab.research.google.com/github/deepmind/graphcast/blob/master/gencast_demo_cloud_vm.ipynb).
 
@@ -169,25 +169,9 @@ WARNING: For backwards compatibility, we have also left GraphCast data in the to
 [XArray](https://github.com/pydata/xarray) and
 [XArray-TensorStore](https://github.com/google/xarray-tensorstore).
 
-
-## License and Disclaimers
-
-The Colab notebooks and the associated code are licensed under the Apache License, Version 2.0. You may obtain a copy of the License at: https://www.apache.org/licenses/LICENSE-2.0.
-
-The model weights are made available for use under the terms of the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). You may obtain a copy of the License at: https://creativecommons.org/licenses/by-nc-sa/4.0/.
-
-This is not an officially supported Google product.
-
-Unless required by applicable law or agreed to in writing, all software and materials distributed here under the Apache 2.0 or CC-BY-NC-SA 4.0 licenses are distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the licenses for the specific language governing permissions and limitations under those licenses.
-
-GenCast and GraphCast are part of an experimental research project. You are solely responsible for determining the appropriateness of using or distributing GenCast, GraphCast or any outputs generated and assume all risks associated with your use or distribution of GenCast, GraphCast and outputs and your exercise of rights and permissions granted by Google to you under the relevant License. Use discretion before relying on, publishing, downloading or otherwise using GenCast, GraphCast or any outputs generated. GenCast, GraphCast or any outputs generated (i) are not based on data published by; (ii) have not been produced in collaboration with; and (iii) have not been endorsed by any government meteorological agency or department and in no way replaces official alerts, warnings or notices published by such agencies.
-
-Copyright 2024 DeepMind Technologies Limited.
-
-
 ## Citations
 
-If you use this work, consider citing our papers ([blog post](https://deepmind.google/discover/blog/graphcast-ai-model-for-faster-and-more-accurate-global-weather-forecasting/), [Science](https://www.science.org/doi/10.1126/science.adi2336), [arXiv](https://arxiv.org/abs/2212.12794), [arxiv GenCast](https://arxiv.org/abs/2312.15796)):
+If you use this work, consider citing our papers ([blog post](https://deepmind.google/discover/blog/graphcast-ai-model-for-faster-and-more-accurate-global-weather-forecasting/):
 
 ```latex
 @article{lam2023learning,
