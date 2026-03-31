@@ -196,19 +196,6 @@ If you use this work, consider citing our papers ([blog post](https://deepmind.g
 }
 ```
 
-## Acknowledgements
-
-The (i) GenCast and GraphCast communicate with and/or reference with the following separate libraries and packages and the colab notebooks include a few examples of ECMWF’s ERA5 and HRES data that can be used as input to the models.
-Data and products of the European Centre for Medium-range Weather Forecasts (ECMWF), as modified by Google.
-Modified Copernicus Climate Change Service information 2023. Neither the European Commission nor ECMWF is responsible for any use that may be made of the Copernicus information or data it contains.
-ECMWF HRES datasets
-Copyright statement: Copyright "© 2023 European Centre for Medium-Range Weather Forecasts (ECMWF)".
-Source: www.ecmwf.int
-License Statement: ECMWF open data is published under a Creative Commons Attribution 4.0 International (CC BY 4.0). https://creativecommons.org/licenses/by/4.0/
-Disclaimer: ECMWF does not accept any liability whatsoever for any error or omission in the data, their availability, or for any loss or damage arising from their use.
-
-Use of the third-party materials referred to above may be governed by separate terms and conditions or license provisions. Your use of the third-party materials is subject to any such terms and you should check that you can comply with any applicable restrictions or terms and conditions before use.
-
 
 ## Contact
 
